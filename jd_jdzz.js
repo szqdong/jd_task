@@ -46,17 +46,8 @@ if ($.isNode()) {
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
-  `AUWE5mv7BzjQOXjT9jikelw@AUWE5m_-VzDFdCGmr3XRCxA@AUWE5marDzmMNW2b4jCkekg@AUWE5m6yTmTENC2mr2X5Mlg@AUWE5mP6ZzzMADjSq2y8bnQ@S5KkcCH9rjROFX0CGwK1W@S5KkcMlhPnDGeZESG1ZZM@S5KkcM0pAoSGuRlyw5atJ`,
+  `ATGEC3-fsrn13aiaEqiM@AUWE5maSSnzFeDmH4iH0elA@ATGEC3-fsrn13aiaEqiM@AUWE5m6WUmDdZC2mr1XhJlQ@AUWE5m_jEzjJZDTKr3nwfkg@A06fNSRc4GIqY38pMBeLKQE2InZA@AUWE5mf7ExDZdDmH7j3wfkA@AUWE5m6jBy2cNAWX7j31Pxw@AUWE5mK2UnDddDTX61S1Mkw@AUWE5mavGyGZdWzP5iCoZwQ`,
+  `ATGEC3-fsrn13aiaEqiM@AUWE5maSSnzFeDmH4iH0elA@ATGEC3-fsrn13aiaEqiM@AUWE5m6WUmDdZC2mr1XhJlQ@AUWE5m_jEzjJZDTKr3nwfkg@A06fNSRc4GIqY38pMBeLKQE2InZA@AUWE5m6_BmTUPAGH42SpOkg@AUWE53NTIs3V8YBqthQMI@AUWE5m6yVxTJcWjWr3nRIlw`
 ]
 !(async () => {
   $.tuanList = []
@@ -212,14 +203,15 @@ function getUserTuanInfo() {
         } else {
           if (safeGet(data)) {
             data = JSON.parse(data);
-            if (!data.data.canStartNewAssist)
+            if (data.data && !data.data.canStartNewAssist) {
               $.tuan = {
                 "activityIdEncrypted": data.data.id,
                 "assistStartRecordId": data.data.assistStartRecordId,
                 "assistedPinEncrypted": data.data.encPin,
                 "channel": "FISSION_BEAN"
               }
-            $.tuanActId = data.data.id
+              $.tuanActId = data.data.id
+            }
           }
         }
       } catch (e) {
@@ -269,7 +261,7 @@ function getUserInfo() {
             if (data.data.shareTaskRes) {
               console.log(`\n【京东账号${$.index}（${$.nickName || $.UserName}）的${$.name}好友互助码】${data.data.shareTaskRes.itemId}\n`);
             } else {
-              console.log(`已满5人助力,暂时看不到您的${$.name}好友助力码`)
+              console.log(`\n\n已满5人助力或助力功能已下线,故暂时无${$.name}好友助力码\n\n`)
             }
           }
         }
@@ -382,10 +374,10 @@ function shareCodesFormat() {
       const tempIndex = $.index > inviteCodes.length ? (inviteCodes.length - 1) : ($.index - 1);
       $.newShareCodes = inviteCodes[tempIndex].split('@');
     }
-    // const readShareCodeRes = await readShareCode();
-    // if (readShareCodeRes && readShareCodeRes.code === 200) {
-    //   $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
-    // }
+    const readShareCodeRes = await readShareCode();
+    if (readShareCodeRes && readShareCodeRes.code === 200) {
+      $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
+    }
     console.log(`第${$.index}个京东账号将要助力的好友${JSON.stringify($.newShareCodes)}`)
     resolve();
   })
