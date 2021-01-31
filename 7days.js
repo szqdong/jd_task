@@ -16,9 +16,9 @@
 const sams = new Env('梨涡签到领现金');
 
 const lwKey = 'CookieJD'
-const lwVal = sams.getdata(lwKey)
+let lwVal = sams.getdata(lwKey)
 const lwbodyKey = "Body"
-const lwbody = sams.getdata(lwbodyKey)
+let lwbody = sams.getdata(lwbodyKey)
 
 if (sams.isNode()) {
   if (!lwVal) {
