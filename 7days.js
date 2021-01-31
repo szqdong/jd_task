@@ -20,7 +20,7 @@ const lwVal = sams.getdata(lwKey)
 const lwbodyKey = "Body"
 const lwbody = sams.getdata(lwbodyKey)
 
-if ($.isNode()) {
+if (sams.isNode()) {
   if (!lwVal) {
     let CookieJDs = [];
     if (process.env.JD_COOKIE) {
