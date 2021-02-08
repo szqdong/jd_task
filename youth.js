@@ -469,7 +469,7 @@ function readArticle() {
               //$.log(readres.items.max_notice)
            }
          } catch(e) {
-          $.logErr(e+resp);
+          $.logErr(e+response);
         } finally {
           resolve()
         }
@@ -637,7 +637,12 @@ async function showmsg() {
          $.msg($.name+"  "+nick+" "+rotarynum,subTitle,detail)//任务全部完成且通知间隔不为0时通知;
         } 
      else {
-       console.log(`【收益总计】${signinfo.data.user.score}青豆  现金约${cash}元\n`+ detail)
+       try {
+        console.log(`【收益总计】${signinfo.data.user.score}青豆  现金约${cash}元\n`+ detail)
+
+       } catch (error) {
+         console.log(error)
+       }
    }
 }
 
