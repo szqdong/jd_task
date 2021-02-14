@@ -682,7 +682,7 @@ async function showmsg() {
          $.msg($.name+"  "+nick+" "+rotarynum,subTitle,detail)//任务全部完成且通知间隔不为0时通知;
         } 
      else {
-       console.log(`【收益总计】${totalscore}青豆  现金约${cash}元\n`+ detail)
+       //console.log(`【收益总计】${totalscore}青豆  现金约${cash}元\n`+ detail)
    }
 }
 
