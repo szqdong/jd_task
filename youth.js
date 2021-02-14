@@ -113,7 +113,7 @@ function getRandomArrayElements(arr, count) {
     };
     myuid = cookie.match(/uid=\d+/);
     await userInfo();
-    $.log(`\n********** ${nick} 现金收益: ${cash}元 ********\n`);
+    //$.log(`\n********** ${nick} 现金收益: ${cash}元 ********\n`);
     await kdHost();
     await friendsign();
     await TaskCenter() 
