@@ -21,7 +21,6 @@ if (sams.isNode()) {
     Val = CookieJDs[0];
   }
 }
-
 const headers ={"Accept": "application/json, text/plain, */*",
                 "Accept-Encoding": "gzip, deflate, br",
                 "Accept-Language": "zh-cn",
@@ -244,7 +243,7 @@ function Sign() {
 
 function show(){
     let title = "京东特权活力值签到并领取"
-    sams.msg(title,message,taskmsg,option)
+    //sams.msg(title,message,taskmsg,option)
 }
 
 async function dotask() {
