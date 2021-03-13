@@ -36,7 +36,31 @@ function hourFormat(time) {
   } else {
     date = new Date();
   }
-  return(date.getHours() >= 10 ? date.getDate() : '0' + date.getHours());
+  
+    let currentZoneTime = new Date(time);
+    let currentZoneHours = currentZoneTime.getHours();
+    let offsetZone = currentZoneTime.getTimezoneOffset() / 60;
+     console.log('------------------------------')
+    
+    if(offsetZone > 0) {
+      // 大于0的是西区（西区晚） 西区应该用时区绝对值加京八区 重新设置时间
+      // 西区时间比东区时间晚 所以加时区间隔
+      offsetZone = offsetZone + 8;
+      currentZoneTime.setHours(currentZoneHours - offsetZone)
+      console.log(currentZoneHours - offsetZone)
+    } else {
+      // 小于0的是东区（东区早）  东区时间直接跟京八区相加
+      offsetZone += 8; 
+      console.log(currentZoneHours + offsetZone)
+    }
+   console.log('----------hour--------------')
+
+   console.log(date.getHours() >= 10 ? date.getHours() : '0' + date.getHours())
+
+   console.log('------------------------------')
+
+  
+  return(date.getHours() >= 10 ? date.getHours() : '0' + date.getHours());
 }
 
 let cookieArr = [], cookie = '',
