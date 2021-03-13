@@ -37,7 +37,7 @@ function hourFormat(time) {
     date = new Date();
   }
   
-    let currentZoneTime = new Date(time);
+    let currentZoneTime = new Date();
     let currentZoneHours = currentZoneTime.getHours();
     let offsetZone = currentZoneTime.getTimezoneOffset() / 60;
      console.log('------------------------------')
