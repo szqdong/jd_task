@@ -368,7 +368,7 @@ function CardStatus() {
     $.get(kdHost('WebApi/PunchCard/getMainData?&' + cookie), async(error, resp, data) =>{
       punchcard = JSON.parse(data);
       if (punchcard.code == 1) {
-        if (punchcard.data.user.status == 0 && hourFormat(UTC8) > "21") {
+        if (punchcard.data.user.status == 0 && hourFormat(UTC8) >= "19") {
           await punchCard()
         } else if (punchcard.data.user.status == 1) {
            $.log("每日打卡已报名，请每天早晨"+cardTime+"点运行打卡");
