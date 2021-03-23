@@ -22,9 +22,9 @@ let cardTime = $.getdata('zqtime')||"05";//打卡时间
 let rotaryscore=0,doublerotary=0; 
 if($.isNode()){
   if(process.env.WITHDRAW_URL){
-    withdrawUrl = [process.env.WITHDRAW_URL]
+    withdrawUrl = process.env.WITHDRAW_URL
   }
-  withdrawBody = [process.env.WITHDRAW_BODY]
+  withdrawBody = process.env.WITHDRAW_BODY
 }
 
 const UTC8 = new Date().getTime() + new Date().getTimezoneOffset()*60000 + 28800000;
