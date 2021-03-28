@@ -827,14 +827,14 @@ async function doFriendsWater() {
   await taskInitForFarm();
   const { waterFriendCountKey, waterFriendMax } = $.farmTask.waterFriendTaskInit;
   console.log(`今日已给${waterFriendCountKey}个好友浇水`);
+  const tempIndex = $.index > jdFruitShareArr.length ? (jdFruitShareArr.length - 1) : ($.index - 1);
+
   if (waterFriendCountKey < waterFriendMax) {
     let needWaterFriends = [];
     if ($.friendList.friends && $.friendList.friends.length > 0) {
       $.friendList.friends.map((item, index) => {
-        if (item.friendState === 1) {
-          if (needWaterFriends.length < (waterFriendMax - waterFriendCountKey)) {
-            needWaterFriends.push(item.shareCode);
-          }
+        if (needWaterFriends.length < 6) {
+          needWaterFriends.push(jdFruitShareArr[tempIndex].split('@')[needWaterFriends.length]);
         }
       });
       //TODO ,发现bug,github action运行发现有些账号第一次没有给3个好友浇水
