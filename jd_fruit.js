@@ -806,16 +806,6 @@ async function getAwardInviteFriend() {
       }
     }
     
-    
-    if ($.friendList.friends && $.friendList.friends.length > 0) {
-      for (let friend of $.friendList.friends) {
-        console.log(`\n开始删除好友 [${friend.shareCode}]`);
-        const deleteFriendForFarm = await request('deleteFriendForFarm', { "shareCode": `${friend.shareCode}`,"version":8,"channel":1 });
-        if (deleteFriendForFarm && deleteFriendForFarm.code === '0') {
-          console.log(`删除好友 [${friend.shareCode}] 成功\n`);
-        }
-      }
-    }
     await receiveFriendInvite();//为他人助力,接受邀请成为别人的好友
     if ($.friendList.inviteFriendCount > 0) {
       if ($.friendList.inviteFriendCount > $.friendList.inviteFriendGotAwardCount) {
