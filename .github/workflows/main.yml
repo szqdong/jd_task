@@ -7,18 +7,15 @@ on:
     types: started
   repository_dispatch:
     types: Delete-Workflow
-    
+
 jobs:
-  sync:
-    runs-on: ubuntu-18.04
-    #if: github.repository == 'RikudouPatrickstar/jd_scripts'
+  del_runs:
+    runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    timeout-minutes: 2
     steps:
-    - name: Delete Workflow Runs
-      uses: Mattraks/delete-workflow-runs@main
-      with:
-        token: ${{ github.token }}
-        repository: ${{ github.repository }}
-        retain_days: 1
-        keep_minimum_runs: 0
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.token }}
+          repository: ${{ github.repository }}
+          retain_days: 2
