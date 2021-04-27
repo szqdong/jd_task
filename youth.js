@@ -333,6 +333,11 @@ function userInfo() {
     return new Promise((resolve, reject) => {
         $.post(kdHost('WebApi/NewTaskIos/getSign'), async(error, resp, data) => {
             signinfo = JSON.parse(data);
+             console.log(parseInt(cash) >= withdrawcash)
+             console.log(!withdrawBody == false)
+             console.log(signinfo.status)
+
+          
             if (signinfo.status == 1) {
                 cash = signinfo.data.user.money;
                 signday = signinfo.data.sign_day;
